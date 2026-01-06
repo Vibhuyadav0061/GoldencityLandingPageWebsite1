@@ -1,0 +1,378 @@
+/* SEO Content Section Styles */
+.seo-content-section {
+  padding: 80px 0;
+  background: #ffffff;
+  line-height: 1.7;
+}
+
+.seo-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.seo-main-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.seo-content-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.seo-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.seo-intro {
+  font-size: 1.25rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content Blocks */
+.seo-content-block {
+  margin-bottom: 50px;
+  padding: 30px 0;
+}
+
+.seo-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #84cc16;
+  display: inline-block;
+}
+
+.seo-content-block p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* Benefits List */
+.seo-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.seo-benefits-list li {
+  padding: 12px 0;
+  font-size: 1.1rem;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Highlight Box */
+.seo-highlight-box {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border: 1px solid #84cc16;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 30px 0;
+}
+
+.seo-highlight-box h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.seo-highlight-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.seo-highlight-box li {
+  padding: 8px 0;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* Investment Grid */
+.seo-investment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.investment-point {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.investment-point:hover {
+  box-shadow: 0 8px 24px rgba(132, 204, 22, 0.15);
+  border-color: #84cc16;
+}
+
+.investment-point h4 {
+  color: #1e293b;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.investment-point p {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Location Advantages */
+.location-advantages {
+  margin: 30px 0;
+}
+
+.advantage-item {
+  background: #f8fafc;
+  border-left: 4px solid #84cc16;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* Pricing Table */
+.pricing-table {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.pricing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  align-items: center;
+}
+
+.pricing-row:last-child {
+  border-bottom: none;
+}
+
+.pricing-row:nth-child(even) {
+  background: #f9fafb;
+}
+
+.plot-size {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.plot-price {
+  font-weight: 700;
+  color: #84cc16;
+  font-size: 1.2rem;
+}
+
+.plot-type {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Legal Documents */
+.legal-docs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.doc-item {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 1rem;
+  color: #0c4a6e;
+  font-weight: 500;
+}
+
+/* Amenities Grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.amenity-item {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  font-size: 1rem;
+  color: #15803d;
+  font-weight: 500;
+}
+
+/* Benefits List */
+.benefits-list {
+  margin: 30px 0;
+}
+
+.benefits-list h4 {
+  color: #1e293b;
+  font-size: 1.3rem;
+  margin: 20px 0 12px 0;
+  font-weight: 600;
+}
+
+.benefits-list ul {
+  margin-bottom: 24px;
+}
+
+.benefits-list li {
+  padding: 8px 0;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* CTA Section */
+.seo-cta-section {
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  margin: 50px 0;
+  color: white;
+}
+
+.seo-cta-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.seo-cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.seo-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: white;
+  color: #84cc16;
+}
+
+.cta-button.primary:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+  background: white;
+  color: #84cc16;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seo-content-section {
+    padding: 60px 0;
+  }
+  
+  .seo-content-container {
+    padding: 0 16px;
+  }
+  
+  .seo-main-title {
+    font-size: 2rem;
+  }
+  
+  .seo-intro {
+    font-size: 1.1rem;
+  }
+  
+  .seo-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .seo-investment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .seo-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .seo-highlight-box {
+    padding: 20px;
+  }
+  
+  .seo-cta-section {
+    padding: 40px 20px;
+  }
+  
+  .seo-cta-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .seo-cta-content p {
+    font-size: 1.1rem;
+  }
+}

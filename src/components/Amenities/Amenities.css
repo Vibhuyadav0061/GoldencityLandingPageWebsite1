@@ -1,0 +1,642 @@
+/* Amenities Section Styles */
+.amenities-section {
+  position: relative;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  overflow: hidden;
+}
+
+.amenities-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e2e8f0" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.amenities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Header */
+.amenities-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.amenities-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(132, 204, 22, 0.3);
+}
+
+.amenities-badge-icon {
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.amenities-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.amenities-subtitle {
+  font-size: 1.875rem;
+  font-weight: 300;
+  color: #84cc16;
+  margin-bottom: 24px;
+}
+
+.amenities-description {
+  font-size: 1.125rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Amenities Grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+/* 3D Effects and Hover Animations */
+.amenity-card {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(132, 204, 22, 0.1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.amenity-card:hover {
+  transform: translateY(-12px) rotateX(5deg);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+  border-color: rgba(132, 204, 22, 0.4);
+}
+
+.amenity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.05) 0%, rgba(101, 163, 13, 0.02) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.amenity-card:hover::before {
+  opacity: 1;
+}
+
+.amenity-image-container {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.amenity-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.1) contrast(1.05);
+}
+
+.amenity-card:hover .amenity-image {
+  transform: scale(1.15) rotate(1deg);
+  filter: brightness(1.2) contrast(1.1) saturate(1.1);
+}
+
+.amenity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.9) 0%, rgba(101, 163, 13, 0.7) 100%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.amenity-card:hover .amenity-overlay {
+  opacity: 1;
+}
+
+.amenity-overlay-content {
+  text-align: center;
+  color: white;
+  transform: translateY(30px) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.amenity-card:hover .amenity-overlay-content {
+  transform: translateY(0) scale(1);
+}
+
+.amenity-overlay-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+.amenity-overlay-text {
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.amenity-badge-overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(132, 204, 22, 0.9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.amenity-content {
+  padding: 32px 24px;
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+
+.amenity-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.amenity-number {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+  color: white;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 0 6px 20px rgba(132, 204, 22, 0.4);
+  transition: all 0.3s ease;
+}
+
+.amenity-card:hover .amenity-number {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(132, 204, 22, 0.5);
+}
+
+.amenity-icon {
+  font-size: 36px;
+  transition: transform 0.3s ease;
+}
+
+.amenity-card:hover .amenity-icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.amenity-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.amenity-card:hover .amenity-title {
+  color: #84cc16;
+}
+
+.amenity-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.amenity-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.amenity-feature-tag {
+  background: rgba(132, 204, 22, 0.1);
+  color: #84cc16;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Featured Amenity (Large Card) */
+.amenity-card.featured {
+  grid-column: 1 / -1;
+}
+
+.amenity-card.featured .amenity-image-container {
+  height: 400px;
+}
+
+.amenity-card.featured .amenity-content {
+  padding: 40px 32px;
+}
+
+.amenity-card.featured .amenity-title {
+  font-size: 2rem;
+}
+
+.amenity-card.featured .amenity-description {
+  font-size: 1.125rem;
+}
+
+/* Call to Action */
+.amenities-cta {
+  text-align: center;
+  background: white;
+  border-radius: 24px;
+  padding: 48px 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(132, 204, 22, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.amenities-cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.amenities-cta-description {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.amenities-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.amenities-btn-primary {
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(132, 204, 22, 0.3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.amenities-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(132, 204, 22, 0.4);
+}
+
+.amenities-btn-secondary {
+  background: transparent;
+  color: #84cc16;
+  padding: 16px 32px;
+  border: 2px solid #84cc16;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.amenities-btn-secondary:hover {
+  background: #84cc16;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.amenity-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.amenity-card:nth-child(1) { animation-delay: 0.1s; }
+.amenity-card:nth-child(2) { animation-delay: 0.2s; }
+.amenity-card:nth-child(3) { animation-delay: 0.3s; }
+.amenity-card:nth-child(4) { animation-delay: 0.4s; }
+.amenity-card:nth-child(5) { animation-delay: 0.5s; }
+.amenity-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .amenities-container {
+    padding: 0 24px;
+  }
+  
+  .amenities-title {
+    font-size: 3rem;
+  }
+  
+  .amenities-subtitle {
+    font-size: 2.25rem;
+  }
+  
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .amenities-cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .amenity-image-container {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .amenities-section {
+    padding: 100px 0;
+  }
+  
+  .amenities-container {
+    padding: 0 32px;
+  }
+  
+  .amenities-header {
+    margin-bottom: 80px;
+  }
+  
+  .amenities-title {
+    font-size: 3.5rem;
+  }
+  
+  .amenity-image-container {
+    height: 320px;
+  }
+  
+  .amenity-card.featured .amenity-image-container {
+    height: 400px;
+  }
+  
+  .amenity-content {
+    padding: 36px 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .amenities-container {
+    padding: 0 48px;
+  }
+  
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+  .amenity-card.featured {
+    grid-column: span 2;
+  }
+  
+  .amenities-title {
+    font-size: 4rem;
+  }
+  
+  .amenity-image-container {
+    height: 280px;
+  }
+  
+  .amenity-card.featured .amenity-image-container {
+    height: 480px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .amenities-container {
+    padding: 0 80px;
+  }
+  
+  .amenities-title {
+    font-size: 4.5rem;
+  }
+  
+  .amenity-image-container {
+    height: 320px;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 639px) {
+  .amenities-section {
+    padding: 60px 0;
+  }
+  
+  .amenities-container {
+    padding: 0 16px;
+  }
+  
+  .amenities-header {
+    margin-bottom: 40px;
+  }
+  
+  .amenities-title {
+    font-size: 2rem;
+  }
+  
+  .amenities-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .amenities-description {
+    font-size: 1rem;
+  }
+  
+  .amenities-grid {
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  
+  .amenity-image-container {
+    height: 240px;
+  }
+  
+  .amenity-content {
+    padding: 24px 20px;
+  }
+  
+  .amenity-title {
+    font-size: 1.25rem;
+  }
+  
+  .amenity-description {
+    font-size: 0.875rem;
+  }
+  
+  .amenity-number {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+  
+  .amenity-icon {
+    font-size: 28px;
+  }
+  
+  .amenities-cta {
+    padding: 32px 24px;
+  }
+  
+  .amenities-cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .amenities-cta-description {
+    font-size: 1rem;
+  }
+}
+
+/* Special Layout for Featured Items */
+@media (min-width: 1024px) {
+  .amenities-grid.special-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 32px;
+  }
+  
+  .amenity-card.lake-view {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .amenity-card.society-gate {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 1023px) {
+  .amenities-grid.special-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .amenity-card.lake-view {
+    grid-column: span 2;
+  }
+  
+  .amenity-card.society-gate {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 639px) {
+  .amenities-grid.special-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .amenity-card.lake-view,
+  .amenity-card.society-gate {
+    grid-column: span 1;
+  }
+}

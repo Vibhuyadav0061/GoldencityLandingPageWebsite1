@@ -1,0 +1,477 @@
+/* Professional Component Styles */
+
+/* Social Media Button Styles */
+.social-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.social-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.social-btn svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Facebook Button */
+.social-btn.facebook:hover {
+  background: linear-gradient(135deg, #1877F2 0%, #42A5F5 100%);
+  border-color: #1877F2;
+  box-shadow: 0 12px 32px rgba(24, 119, 242, 0.4);
+}
+
+/* Instagram Button */
+.social-btn.instagram:hover {
+  background: linear-gradient(135deg, #E4405F 0%, #833AB4 50%, #F77737 100%);
+  border-color: #E4405F;
+  box-shadow: 0 12px 32px rgba(228, 64, 95, 0.4);
+}
+
+/* YouTube Button */
+.social-btn.youtube:hover {
+  background: linear-gradient(135deg, #FF0000 0%, #FF4444 100%);
+  border-color: #FF0000;
+  box-shadow: 0 12px 32px rgba(255, 0, 0, 0.4);
+}
+
+/* WhatsApp Button */
+.social-btn.whatsapp:hover {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-color: #25D366;
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+}
+
+/* Mobile Social Buttons */
+.social-btn-mobile {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn-mobile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.social-btn-mobile:hover::before {
+  transform: translateX(100%);
+}
+
+.social-btn-mobile svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-btn-mobile:hover {
+  transform: scale(1.1);
+}
+
+.social-btn-mobile:hover svg {
+  transform: scale(1.1);
+}
+
+.social-btn-mobile.facebook:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+}
+
+.social-btn-mobile.instagram:hover {
+  background: linear-gradient(135deg, #E4405F, #833AB4);
+  border-color: #E4405F;
+}
+
+.social-btn-mobile.youtube:hover {
+  background: #FF0000;
+  border-color: #FF0000;
+}
+
+.social-btn-mobile.whatsapp:hover {
+  background: #25D366;
+  border-color: #25D366;
+}
+
+/* Floating WhatsApp Button Enhancement */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+}
+
+.floating-whatsapp svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.5), 0 0 0 10px rgba(37, 211, 102, 0.1);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+  }
+}
+
+/* Social Follow Label Animation */
+.follow-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-weight: 500;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  white-space: nowrap;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.follow-label::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(154, 205, 50, 0.6), transparent);
+}
+
+/* Navbar Enhancements */
+.navbar-glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-glass.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  background: linear-gradient(135deg, #9ACD32, #8BC34A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar-menu-item {
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #9ACD32, #8BC34A);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+
+.navbar-menu-item:hover::after,
+.navbar-menu-item.active::after {
+  width: 80%;
+}
+
+.navbar-contact-btn {
+  position: relative;
+  background: linear-gradient(135deg, #9ACD32 0%, #8BC34A 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(154, 205, 50, 0.3);
+  overflow: hidden;
+}
+
+.navbar-contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.navbar-contact-btn:hover::before {
+  left: 100%;
+}
+
+.navbar-contact-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(154, 205, 50, 0.4);
+}
+
+/* Footer Enhancements */
+.footer-gradient {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  position: relative;
+}
+
+.footer-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #9ACD32, transparent);
+}
+
+.footer-section-title {
+  position: relative;
+  color: #9ACD32;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.footer-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #9ACD32, #8BC34A);
+  border-radius: 1px;
+}
+
+.footer-link {
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #9ACD32;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #9ACD32;
+  transform: translateX(4px);
+}
+
+.footer-link:hover::before {
+  width: 100%;
+}
+
+.footer-social-btn {
+  width: 44px;
+  height: 44px;
+  background: #475569;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #64748b;
+}
+
+.footer-social-btn:hover {
+  background: linear-gradient(135deg, #9ACD32, #8BC34A);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(154, 205, 50, 0.3);
+  border-color: #9ACD32;
+}
+
+.footer-whatsapp-btn {
+  background: linear-gradient(135deg, #9ACD32 0%, #8BC34A 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(154, 205, 50, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(154, 205, 50, 0.4);
+  background: linear-gradient(135deg, #8BC34A 0%, #7CB342 100%);
+}
+
+/* Mobile Menu Animations */
+.mobile-menu-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.3s ease forwards;
+}
+
+.mobile-menu-item:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu-item:nth-child(2) { animation-delay: 0.2s; }
+.mobile-menu-item:nth-child(3) { animation-delay: 0.3s; }
+.mobile-menu-item:nth-child(4) { animation-delay: 0.4s; }
+.mobile-menu-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hamburger Menu Animation */
+.hamburger-line {
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.hamburger-line:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.hamburger-line:nth-child(3) {
+  transform: translateY(6px);
+}
+
+.hamburger-open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger-open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-cta-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+  
+  .navbar-contact-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .floating-whatsapp {
+    width: 56px;
+    height: 56px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .floating-whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+}
