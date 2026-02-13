@@ -58,7 +58,7 @@ export default function LeadChatBot() {
       .filter(Boolean);
 
     const message = [
-      "Hi! I completed the chatbot for Golden City Township.",
+      "Hi! , I'm interested in Golden City Township plots. Here are my details:",
       detailLines.length ? "My details:" : null,
       ...detailLines,
       "Please connect with me."
@@ -99,7 +99,7 @@ export default function LeadChatBot() {
         },
         {
           from: "bot",
-          text: "Our sales team will contact you shortly."
+          text: "Our sales team will contact you shortly. You can continue the conversation on WhatsApp by clicking the button below."
         },
         {
           from: "bot",
