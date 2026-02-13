@@ -10,6 +10,7 @@ import LocationMap from './components/LocationMap/LocationMap'
 import FAQ from './components/FAQ/FAQ'
 import Footer from './components/Footer/Footer'
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton'
+import LeadChatBot from './components/ChatBot/LeadChatBot';
 
 function App() {
   const structuredData = {
@@ -141,6 +142,7 @@ function App() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
+        
         <section id="home">
           <Hero />
         </section>
@@ -178,11 +180,12 @@ function App() {
       <Footer />
       
       {/* Floating WhatsApp Button */}
-      <WhatsAppButton 
+      {/* <WhatsAppButton 
         phoneNumber="+918448443089"
         message="Hi! I'm interested in Golden City Township plots in Sujanpur, Aligarh. Can we chat?"
         variant="floating"
-      />
+      /> */}
+      <LeadChatBot/>
     </div>
   )
 }

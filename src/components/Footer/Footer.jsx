@@ -1,6 +1,6 @@
 const Footer = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+918448443089";
+    const phoneNumber = "+918448443047";
     const message = "Hi! I'm interested in Golden City Township in Sujanpur, Aligarh. Can you provide more information?";
     const url = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

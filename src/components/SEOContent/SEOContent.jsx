@@ -121,22 +121,22 @@ const SEOContent = () => {
             <div className="pricing-table">
               <div className="pricing-row">
                 <div className="plot-size">100 sq yard</div>
-                <div className="plot-price">₹15 Lakh</div>
+                <div className="plot-price">₹38,50,000</div>
                 <div className="plot-type">Residential</div>
               </div>
               <div className="pricing-row">
                 <div className="plot-size">120 sq yard</div>
-                <div className="plot-price">₹20 Lakh</div>
+                <div className="plot-price">₹46,20,000</div>
                 <div className="plot-type">Residential</div>
               </div>
               <div className="pricing-row">
                 <div className="plot-size">150 sq yard</div>
-                <div className="plot-price">₹25 Lakh</div>
+                <div className="plot-price">₹57,75,000</div>
                 <div className="plot-type">Residential</div>
               </div>
               <div className="pricing-row">
                 <div className="plot-size">200 sq yard</div>
-                <div className="plot-price">₹35 Lakh</div>
+                <div className="plot-price">₹77 Lakh</div>
                 <div className="plot-type">Commercial</div>
               </div>
             </div>
@@ -219,7 +219,7 @@ const SEOContent = () => {
                 <a href="tel:+918448443047" className="cta-button primary">
                   📞 Call Now: +91-8448443047
                 </a>
-                <a href="https://wa.me/918448443089" className="cta-button secondary">
+                <a href="https://wa.me/918448443047" className="cta-button secondary">
                   💬 WhatsApp Inquiry
                 </a>
               </div>

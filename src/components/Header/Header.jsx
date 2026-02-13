@@ -46,19 +46,23 @@ const Header = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+918448443089";
+    const phoneNumber = "+918448443047";
     const message = "Hi! I'd like to talk about Golden City Township services in Sujanpur, Aligarh.";
     const url = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
 
-  const handleMenuClick = (href) => {
-    setIsMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+const handleMenuClick = (href) => {
+  setIsMenuOpen(false);
+
+  const element = document.querySelector(href);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+
+    // ✅ Update URL hash without page reload
+    window.history.pushState(null, '', href);
+  }
+};
 
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : 'header--transparent'}`}>

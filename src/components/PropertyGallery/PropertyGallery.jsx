@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import './PropertyGallery.css';
-
+import roadConstructionImg from '../../assets/images/RoadConstruction.jpg';
+import commercialPlotImg from '../../assets/images/CommercialPlots.png';
+import wideRoadImg from '../../assets/images/wideRoad.jpg';
+import residentialPlotImg from '../../assets/images/residentialdevelopment.png';
+import plotsBoundaryImg from '../../assets/images/plotsboundry.jpg';
+import masterPlane from '../../assets/images/masterplane.jpg';
+import waterSystemImg from '../../assets/images/waterSystem.jpg';
 const PropertyGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [showAllImages, setShowAllImages] = useState(false);
@@ -11,84 +17,56 @@ const PropertyGallery = () => {
       id: 1,
       title: 'Township Master Layout',
       category: 'masterplan',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: masterPlane,
       description: 'Comprehensive master plan showing complete township layout and plot distribution'
     },
     {
       id: 2,
       title: 'Residential Plot Development',
       category: 'plots',
-      image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: residentialPlotImg,
       description: 'Well-planned residential plots with proper demarcation and boundaries'
     },
     {
       id: 3,
       title: 'Wide Internal Roads',
       category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: wideRoadImg,
       description: 'Modern wide roads with proper drainage and street lighting infrastructure'
     },
     {
       id: 4,
       title: 'Commercial Plot Section',
       category: 'plots',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image:commercialPlotImg ,
       description: 'Prime commercial plots strategically located for business development'
     },
     {
       id: 5,
       title: 'Road Construction Progress',
       category: 'construction',
-      image: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: roadConstructionImg,
       description: 'Ongoing road construction with modern equipment and quality materials'
     },
     {
       id: 6,
       title: 'Plot Boundary Marking',
       category: 'plots',
-      image: 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: plotsBoundaryImg,
       description: 'Clear plot demarcation with boundary stones and proper surveying'
     },
     {
       id: 7,
       title: 'Underground Utilities',
       category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image:waterSystemImg,
       description: 'Underground utility installation including water, electricity, and sewage lines'
     },
     {
       id: 8,
-      title: 'Land Preparation Work',
-      category: 'construction',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      description: 'Professional land leveling and preparation for plot development'
-    },
-    {
-      id: 9,
-      title: 'Corner Plot Locations',
-      category: 'plots',
-      image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      description: 'Premium corner plots with excellent road connectivity and visibility'
-    },
-    {
-      id: 10,
-      title: 'Street Lighting Installation',
-      category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      description: 'Modern LED street lighting system for safe nighttime navigation'
-    },
-    {
-      id: 11,
-      title: 'Drainage System Construction',
-      category: 'construction',
-      image: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      description: 'Advanced drainage system construction for effective water management'
-    },
-    {
-      id: 12,
       title: 'Plot Size Variations',
       category: 'plots',
-      image: 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: residentialPlotImg,
       description: 'Various plot sizes available from 1000 to 5000 sq ft to suit different needs'
     }
   ];
@@ -126,7 +104,7 @@ const PropertyGallery = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+918448443089";
+    const phoneNumber = "+918448443047";
     const message = "Hi! I'm interested in Golden City Township plots and land development in Sujanpur, Aligarh. I saw the development gallery and would like to know more about available plots and pricing.";
     const url = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

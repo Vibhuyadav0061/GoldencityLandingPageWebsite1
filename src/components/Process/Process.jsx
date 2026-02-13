@@ -56,7 +56,7 @@ const Process = () => {
   ];
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+918448443089";
+    const phoneNumber = "+918448443047";
     const message = "Hi! I'd like to know more about your property buying process and get started with my property journey in Golden City Sujanpur, Aligarh.";
     const url = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
