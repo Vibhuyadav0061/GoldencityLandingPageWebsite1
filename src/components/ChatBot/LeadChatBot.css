@@ -3,9 +3,9 @@
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 50;
-  height: 3rem;
-  width: 3rem;
-  background-image: linear-gradient(to bottom, #1f3f73, #162f55);
+  height: 3.8rem;
+  width: 3.8rem;
+  background-image: linear-gradient(to bottom, #caa84b, #51bb27);
   color: white;
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.9);

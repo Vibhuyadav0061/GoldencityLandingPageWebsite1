@@ -18,8 +18,8 @@ const Hero = () => {
   const handleSocialClick = (platform) => {
     const socialLinks = {
       facebook: "https://facebook.com/goldencitytownship",
-      instagram: "https://instagram.com/goldencitytownship",
-      youtube: "https://youtube.com/@goldencitytownship"
+      instagram: "https://www.instagram.com/golden_city_plots/",
+      youtube: "http://www.youtube.com/@goldencitytownship-v4e"
     };
     window.open(socialLinks[platform], '_blank');
   };
