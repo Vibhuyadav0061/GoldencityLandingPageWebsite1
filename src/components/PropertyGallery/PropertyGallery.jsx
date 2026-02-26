@@ -4,9 +4,9 @@ import roadConstructionImg from '../../assets/images/RoadConstruction.jpg';
 import commercialPlotImg from '../../assets/images/CommercialPlots.png';
 import wideRoadImg from '../../assets/images/wideRoad.jpg';
 import residentialPlotImg from '../../assets/images/residentialdevelopment.png';
-import plotsBoundaryImg from '../../assets/images/plotsboundry.jpg';
-import masterPlane from '../../assets/images/masterplane.jpg';
-import waterSystemImg from '../../assets/images/waterSystem.jpg';
+import plotsBoundaryImg from '../../assets/images/SiteBlockMArk.jpeg';
+import masterPlane from '../../assets/images/FrontSiteOverView.jpeg';
+import meatingImage from '../../assets/images/C0046T01.jpg';
 const PropertyGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [showAllImages, setShowAllImages] = useState(false);
@@ -57,9 +57,9 @@ const PropertyGallery = () => {
     },
     {
       id: 7,
-      title: 'Underground Utilities',
+      title: 'Launching Event Meeting',
       category: 'infrastructure',
-      image:waterSystemImg,
+      image:meatingImage,
       description: 'Underground utility installation including water, electricity, and sewage lines'
     },
     {

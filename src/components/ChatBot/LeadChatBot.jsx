@@ -42,7 +42,12 @@ export default function LeadChatBot() {
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, step]);
-
+  useEffect(() => {
+    setTimeout(() => {
+    setIsOpen(true)
+  }, 5000);
+  }, []);
+  
   const currentStep = steps[step];
 
   const buildWhatsAppUrl = (leadAnswers) => {

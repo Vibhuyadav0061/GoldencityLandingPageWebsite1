@@ -60,7 +60,7 @@ const LocationMap = () => {
   ];
 
   const handleGetDirections = () => {
-    const propertyLocation = "28.4595,77.5266";
+    const propertyLocation = "27.971887, 77.772764";
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${propertyLocation}`;
     window.open(googleMapsUrl, '_blank');
   };
@@ -98,18 +98,18 @@ const LocationMap = () => {
           <div className="location-map-container">
             <div className="location-map-wrapper">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d2898.9033392556526!2d77.68998763410328!3d28.002523458937137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.558558599999998!2d77.3797865!4m5!1s0x397350438fdb88b3%3A0xb3c5c78df5ee7164!2sSujanpur%2C%20Uttar%20Pradesh!3m2!1d27.9713024!2d77.7823973!5e1!3m2!1sen!2sin!4v1767683576451!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3721.0160837373587!2d77.77002257557946!3d27.97173061378096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1772084538115!5m2!1sen!2sin"
                 className="location-map-iframe"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Golden City Township Location Map - Sujanpur, Aligarh"
+                title="The Golden City - HavenHub Infra Location Map - Sujanpur, Aligarh"
               ></iframe>
               <div className="location-map-overlay">
                 <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 </svg>
-                GoldenCity Township
+                The Golden City
               </div>
             </div>
             <div className="location-map-controls">
